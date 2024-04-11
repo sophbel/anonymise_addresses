@@ -8,6 +8,6 @@
 ```git clone```
 
 ### Open '240410_intersect_grid_latlons_anon.R'
-Change the code to read in a CSV containing the addresses and an identifiable ID for each line. Line 19 contains the test data frame. Comment this out and replace line 17 with your data.
+Change the code to read in a CSV containing the addresses and an identifiable ID for each line. Line 20 contains the test data frame. Comment this out and replace line 18 with your data.
 
 
