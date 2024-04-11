@@ -7,7 +7,7 @@ library(raster)
 
 # file with an example of CALIOPE model
 ### downloaded file
-grid_filename <- "/home/sbelman/Documents/BRD/incidence/anon_grid_intersect/data/sconcno2_2017091700.nc"
+grid_filename <- "/home/sbelman/Documents/BRD/incidence/anon_grid_intersect/data/sconcno2_singleday.nc"
 # replace here the path to your csv file containing point data (lat,lon)
 ## read in address data including any crucial name or ID and the address (street, number, zip code, barrio, city) [it is somewhat flexible but check converted longs. and lats. on map at the end to ensure they are sensible]
 df<-data.frame(patient_id=c('1a','1b','1c','1d','1e'),name=c("Sophies House", "Bloc District","BSC","Mexcla","Acellera Labs SL"),address=c("C. de Nàpols, 281, Gràcia, 08025 Barcelona","Carrer de Zamora, 96-106, Sant Martí, 08018 Barcelona","Plaça d'Eusebi Güell, 1-3, Les Corts, 08034 Barcelona","C/ de Ramón y Cajal, 35, Gràcia, 08012 Barcelona","C/ del Dr. Trueta, 183, Sant Martí, 08005 Barcelona"))
