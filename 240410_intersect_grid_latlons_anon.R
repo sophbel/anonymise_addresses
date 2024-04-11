@@ -1,4 +1,4 @@
-install.packages("sf","dplyr","ncdf4","raster","mapview","data.table")
+install.packages("sf","dplyr","ncdf4","raster","mapview","data.table","tidygeocoder")
 
 # --- load libraries
 library(sf)
@@ -7,6 +7,7 @@ library(ncdf4)
 library(raster)
 library(mapview)
 library (data.table)
+library(tidygeocoder)
 
 # --- read in air quality single day NO2 data for Catalonia which contains 1km grid squares
 ## downloaded file
@@ -58,10 +59,10 @@ if((st_crs(latlons)==st_crs(daily_sf)) ==TRUE) {print("CRS projections match")}
 areas_intersect <- st_intersection(daily_sf, latlons)
 
 ## plot to ensure that the points overlap with the gridded data
-p<-ggplot()+
+(p<-ggplot()+
   geom_sf(data=daily_sf,aes(fill=Nitrogen.Dioxide.Concentration),color=NA)+
-  geom_sf(data=latlons)
-ggsave(p,file="./output/intersection_plot.png")
+  geom_sf(data=latlons))
+ggsave(p,file="./output/intersection_plot.png",width=8,height=8)
 
 anonymized_IDs<-st_drop_geometry(areas_intersect[c("grid_ID","patient_id")])
 write.table(anonymized_IDs,file="./output/anonymized_IDs.csv",sep = ",",quote = FALSE,col.names =TRUE,row.names = FALSE)
