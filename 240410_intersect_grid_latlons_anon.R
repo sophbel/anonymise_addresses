@@ -1,8 +1,10 @@
+install.packages("sf","dplyr","ncdf4","raster","mapview")
 
 library(sf)
 library(dplyr)
 library(ncdf4)
 library(raster)
+library(mapview)
 
 
 # file with an example of CALIOPE model
@@ -54,3 +56,7 @@ ggsave(p,file="/home/sbelman/Documents/BRD/incidence/anon_grid_intersect/output/
 anonymized_IDs<-st_drop_geometry(areas_intersect[c("grid_ID","patient_id")])
 write.table(anonymized_IDs,file="/home/sbelman/Documents/BRD/incidence/anon_grid_intersect/output/anonymized_IDs.csv",sep = ",",quote = FALSE,col.names =TRUE,row.names = FALSE)
 
+
+
+mapview(latlons)+
+  mapview(daily_sf)
