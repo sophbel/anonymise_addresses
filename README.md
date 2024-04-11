@@ -3,7 +3,7 @@
 ## Steps to run
 
 ### install R packages
-```install.packages("sf","dplyr","ncdf4","raster","mapview")``` <br>
+```install.packages("sf","dplyr","ncdf4","raster","mapview","data.table","tidygeocoder")``` <br>
 ### clone this repository into your computer using git clone
 ```git clone https://github.com/sophbel/anonymise_addresses.git```
 
