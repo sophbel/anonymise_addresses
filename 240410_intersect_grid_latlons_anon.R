@@ -6,7 +6,7 @@ library(dplyr)
 library(ncdf4)
 library(raster)
 library(mapview)
-library (data.table)
+library(data.table)
 library(tidygeocoder)
 
 # --- read in air quality single day NO2 data for Catalonia which contains 1km grid squares
